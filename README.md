@@ -12,7 +12,7 @@ This package requires PHP >= 7.0 and composer to run.
 Run the command below to Install.
 
 ```
-composer require stripe/stripe-php
+composer require bitsika/merchant-php
 ```
 
 To use the bindings, use Composer's autoload:
