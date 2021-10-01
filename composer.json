@@ -1,0 +1,12 @@
+{
+    "name": "bitsika/bitsika-php-sdk",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Bitsika\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}
