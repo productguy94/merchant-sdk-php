@@ -37,6 +37,21 @@ $merchant = new Merchant('bsk_sec_Udb1CPGxNKw7oNP3IwTVfxNP9k8');
 
 From the sample above, `$merchant` is now an instance of a Bitsika merchant, and can be used to perform any action on the merchant. 
 
+# Merchant
+### Get merchant detail
+```
+$response = $merchant->detail();
+
+var_dump($response);
+```
+
+### Get merchant statistics
+```
+$response = $merchant->statistics();
+
+var_dump($response);
+```
+
 # Invoices
 ### Get all invoices
 ```
@@ -163,6 +178,19 @@ var_dump($response);
 ```
 
 # Virtual card
+
+###  Create Card
+```
+$response = $merchant->virtualCard()->create([
+   "name" => "Tommie Nii Darku", 
+   "currency" => "USD", 
+   "amount" => 11, 
+   "debit_from" => "GHS" 
+]);
+
+var_dump($response);
+```
+
 ###  Get all virtual cards
 ```
 $response = $merchant->virtualCard()->all();
@@ -178,11 +206,137 @@ $response = $merchant->virtualCard()->get($cardId);
 var_dump($response);
 ```
 
-###  Get virtual card by id
+###  Delete virtual card by id
 ```
 $cardId = 113;
-$response = $merchant->virtualCard()->get($cardId);
+$response = $merchant->virtualCard()->delete($cardId);
 
 var_dump($response);
 ```
 
+###  Fund virtual card by id
+```
+$cardId = 113;
+$response = $merchant->virtualCard()->fund($cardId, [
+   "amount" => "10", 
+   "currency" => "USD", 
+   "debit_from" => "GHS", 
+   "card_id" => "5" 
+]);
+
+var_dump($response);
+```
+
+###  Withdraw from card by id
+```
+$cardId = 113;
+$response = $merchant->virtualCard()->withdraw($cardId, [
+   "amount" => "5", 
+   "card_id" => "1" 
+]);
+
+var_dump($response);
+```
+
+###  Get card Transactions
+```
+$cardId = 113;
+$response = $merchant->virtualCard()->transactions($cardId);
+
+var_dump($response);
+```
+
+###  Block Card
+```
+$cardId = 113;
+$response = $merchant->virtualCard()->block($cardId);
+
+var_dump($response);
+```
+
+###  Unblock Card
+```
+$cardId = 113;
+$response = $merchant->virtualCard()->unblock($cardId);
+
+var_dump($response);
+```
+
+# Bitcoin
+
+###  Generate wallet
+```
+$userId = 39;
+$response = $merchant->bitcoin()->generate($userId);
+
+var_dump($response);
+```
+
+###  Check wallet
+```
+$userId = 39;
+$response = $merchant->bitcoin()->check($userId);
+
+var_dump($response);
+```
+
+# ABCD
+
+###  Generate wallet
+```
+$accountName = "John Doe";
+$response = $merchant->abcd()->generate($accountName);
+
+var_dump($response);
+```
+
+###  Check wallet
+```
+$accountName = "John Doe";
+$response = $merchant->abcd()->check($accountName);
+
+var_dump($response);
+```
+
+
+# Banks
+
+###  Get Nigeria banks
+```
+$response = $merchant->banks()->nigeria();
+
+var_dump($response);
+```
+
+###  Get Ghana banks
+```
+$response = $merchant->banks()->ghana();
+
+var_dump($response);
+```
+
+###  Create virtual bank account
+```
+$response = $merchant->banks()->create([
+  "account_name" => "Tommie N Darku"
+]);
+
+var_dump($response);
+```
+
+### Verify Bank account
+```
+// Verify Ghana banks
+$response = $merchant->banks()->verifyAccount('ghana', [
+ 	"account_number" => "0218420116",
+    "bank_code" => "058"
+]);
+
+// Verify Nigeria banks
+$response = $merchant->banks()->verifyAccount('nigeria', [
+ 	"account_number" => "0218420116",
+    "bank_code" => "058"
+]);
+
+var_dump($response);
+```
