@@ -119,8 +119,7 @@ class Http implements HttpClientInterface
     /**
      * Make Delete request using the client set in the construct
      * 
-     * @param string $url    URL to make delete request to 
-     * @param array $params  Form options 
+     * @param string $url    URL to make delete request 
      * 
      * @return Request
      */
