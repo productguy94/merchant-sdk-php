@@ -12,13 +12,15 @@ class Transaction
      * @var HttpClientInterface
      */
     protected $http;
-    
-    protected $response;
+     
     /**
-     * Create instance of Bitsika
+     * Http response
      * 
-     * @param string $secretKey    Merchant Secret Key 
-     * 
+     * @var array
+     */
+    protected $response;
+
+    /**
      * @return void
      */
     public function __construct(HttpClientInterface $http)

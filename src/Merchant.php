@@ -28,6 +28,13 @@ class Merchant
      */
     protected $http;
     
+    /**
+     * Http response
+     * 
+     * @var array
+     */
+    protected $response;
+    
 
     /**
      * Create instance of Bitsika
