@@ -335,7 +335,7 @@ $response = $merchant->banks()->verifyAccount('ghana', [
 
 // Verify Nigeria banks
 $response = $merchant->banks()->verifyAccount('nigeria', [
- 	"account_number" => "0218420116",
+    "account_number" => "0218420116",
     "bank_code" => "058"
 ]);
 
