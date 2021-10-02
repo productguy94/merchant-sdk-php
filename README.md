@@ -2,17 +2,20 @@
 
 The Bitsika Merchant PHP library gives convenient access to the Merchant API from applications written in the PHP language.
 
+## API Documentation
+https://documenter.getpostman.com/view/12690520/UUy39RrV
+
 ## Requirements
-PHP >= 7.0
-A Bitsika merchant `secret_key`.
-As indicated above, In other to use the package, you need a Bisika Merchant Secret key. If you do not have one, you can get  [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security)
+- PHP >= 7.0
+- A Bitsika merchant `secret_key`.
+>> As indicated above, In other to use the package, you need a Bisika Merchant Secret key. If you do not have one, you can get  [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security)
 
 ## Installation
 This package requires PHP >= 7.0 and composer to run.
 Run the command below to Install.
 
 ```
-composer require bitsika/merchant-php
+composer require bitsika/merchant-sdk
 ```
 
 To use the bindings, use Composer's autoload:
@@ -25,7 +28,8 @@ The binding relies on [Guzzle](https://guzzle3.readthedocs.io/index.html) to wor
 
 ## Getting Started
 Below are basic examples on how to use the package.
-Here we would assume `bsk_sec_Udb1CPGxNKw7oNP3IwTVfxNP9k8` is our merchant's secret key. (Note: You should change this to your merchant's secret key when testing. If you do not have one, visit [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) to get it)
+>> Here we would assume `bsk_sec_SoMemAGicalNumBErForteSt` is our merchant's secret key. (Note: You should change this to your merchant's secret key when testing. If you do not have one, visit [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) to get it)
+
 
 ```
 require_once __DIR__ . '/vendor/autoload.php';
@@ -35,7 +39,7 @@ use Bitsika\Merchant;
 $merchant = new Merchant('bsk_sec_Udb1CPGxNKw7oNP3IwTVfxNP9k8');
 ```
 
-From the sample above, `$merchant` is now an instance of a Bitsika merchant, and can be used to perform any action on the merchant. 
+From the sample above, the variable `$merchant` is now an instance of a Bitsika merchant, and can be used to perform any action on the merchant. 
 
 # Merchant
 ### Get merchant detail
@@ -100,10 +104,9 @@ $response = $merchant->transaction()->all([
     ...
 ]);
 
-You can add other filters to the array. Or leave the array empty if you do not plan on filtering your response.
-
 var_dump($response);
 ```
+You can add other filters to the array. Alternatively, if you do not plan on filtering your response, you can either leave the array empty or don't pass any argument into it.
 
 ###  Get transaction statistics
 ```
@@ -220,8 +223,7 @@ $cardId = 113;
 $response = $merchant->virtualCard()->fund($cardId, [
    "amount" => "10", 
    "currency" => "USD", 
-   "debit_from" => "GHS", 
-   "card_id" => "5" 
+   "debit_from" => "GHS"
 ]);
 
 var_dump($response);
@@ -231,8 +233,7 @@ var_dump($response);
 ```
 $cardId = 113;
 $response = $merchant->virtualCard()->withdraw($cardId, [
-   "amount" => "5", 
-   "card_id" => "1" 
+   "amount" => "5"
 ]);
 
 var_dump($response);
@@ -328,7 +329,7 @@ var_dump($response);
 ```
 // Verify Ghana banks
 $response = $merchant->banks()->verifyAccount('ghana', [
- 	"account_number" => "0218420116",
+    "account_number" => "0218420116",
     "bank_code" => "058"
 ]);
 

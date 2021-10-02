@@ -1,5 +1,5 @@
 {
-    "name": "bitsika/bitsika-php-sdk",
+    "name": "bitsika/merchant-sdk",
     "type": "library",
     "autoload": {
         "psr-4": {

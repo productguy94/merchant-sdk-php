@@ -75,6 +75,7 @@ class VirtualCard
     public function fund($id, array $params) : array
     {
         $url = "virtual-card/{$id}/fund";
+        $params['card_id'] = $id;
 
         $this->response = $this->http->post($url, $params);
         return $this->response->json();
@@ -88,6 +89,7 @@ class VirtualCard
     public function withdraw($id, array $params) : array
     {
         $url = "virtual-card/{$id}/withdraw";
+        $params['card_id'] = $id;
 
         $this->response = $this->http->post($url, $params);
         return $this->response->json();
