@@ -36,7 +36,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Bitsika\Merchant;
 
-$merchant = new Merchant('bsk_sec_Udb1CPGxNKw7oNP3IwTVfxNP9k8');
+$merchant = new Merchant('bsk_sec_SoMemAGicalNumBErForteSt');
 ```
 
 From the sample above, the variable `$merchant` is now an instance of a Bitsika merchant, and can be used to perform any action on the merchant. 
