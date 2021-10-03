@@ -2,11 +2,7 @@
 
 namespace Bitsika\Resources\Supports;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\RequestException;
 use Bitsika\Resources\Contracts\HttpClientInterface;
-use InvalidArgumentException;
 
 class Http implements HttpClientInterface
 {
@@ -62,7 +58,7 @@ class Http implements HttpClientInterface
      * 
      * @param string $url    URL to make GET request to 
      * 
-     * @return Request
+     * @return Response
      */
     public function get($url, array $params = [])
     {
@@ -77,7 +73,7 @@ class Http implements HttpClientInterface
      * @param string $url    URL to make POST request to 
      * @param array $params  Form options 
      * 
-     * @return Request
+     * @return Response
      */
     public function post($url, array $params = [])
     {
@@ -92,7 +88,7 @@ class Http implements HttpClientInterface
      * @param string $url    URL to make Put request to 
      * @param array $params  Form options 
      * 
-     * @return Request
+     * @return Response
      */
     public function put($url, array $params = [])
     {
@@ -107,7 +103,7 @@ class Http implements HttpClientInterface
      * @param string $url    URL to make patch request to 
      * @param array $params  Form options 
      * 
-     * @return Request
+     * @return Response
      */
     public function patch($url, array $params = [])
     {
@@ -121,7 +117,7 @@ class Http implements HttpClientInterface
      * 
      * @param string $url    URL to make delete request 
      * 
-     * @return Request
+     * @return Response
      */
     public function delete($url)
     {

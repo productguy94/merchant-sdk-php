@@ -3,8 +3,6 @@
 namespace Bitsika\Resources\Supports;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\RequestException;
 use InvalidArgumentException;
 
 class RequestHandler
@@ -65,18 +63,6 @@ class RequestHandler
         }
 
         return (new Client($this->clientOptions))->request($method, $url, $options);
-
-        // if (empty($this->baseUrl)) {
-        //     $client = new Client([
-        //         'base_uri' => $this->baseUrl
-        //     ]);
-        // } else {
-        //     $client = $this->client;
-        // }
-
-        // return $client->request($method, $url, [
-        //     'headers' => $this->headers,
-        // ]);
     }
 
     public function setBaseUrl(string $url)

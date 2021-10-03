@@ -2,7 +2,6 @@
 
 namespace Bitsika\Resources\Supports;
 
-
 final class HttpMethod
 {
     const GET = 'GET';
@@ -13,10 +12,9 @@ final class HttpMethod
 
     public static function all()
     {
-        // Avoid using reflection to do this here, 
-        // to avoid slowing things down
         return [
-            self::GET, self::POST, self::PUT, self::PATCH, self::DELETE
+            self::GET, self::POST, self::PUT, 
+            self::PATCH, self::DELETE
         ];
     }
 }
