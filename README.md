@@ -57,6 +57,21 @@ var_dump($response);
 ```
 
 # Invoices
+
+### Create invoice
+```
+$response = $merchant->invoices()->create([
+    "title" => "Coins of life", 
+    "description" => "Biscuits that makes the brain go pita paka, pita paka", 
+    "amount" => 2000000, 
+    "currency" => "NGN", 
+    "recipient_email" => "ibk@bitsika.africa", 
+    "photo_url" => "https://lindaikeji.com" 
+]);
+
+var_dump($response);
+```
+
 ### Get all invoices
 ```
 $response = $merchant->invoices()->all();
@@ -76,20 +91,6 @@ var_dump($response);
 ```
 $invoiceId = '948641e6-b4ea-4053-a60b-7052777f33fa';
 $response = $merchant->invoices()->delete($invoiceId);
-
-var_dump($response);
-```
-
-### Create invoice
-```
-$response = $merchant->invoices()->create([
-    "title" => "Coins of life", 
-    "description" => "Biscuits that makes the brain go pita paka, pita paka", 
-    "amount" => "2000000", 
-    "currency" => "NGN", 
-    "recipient_email" => "ibk@bitsika.africa", 
-    "photo_url" => "https://lindaikeji.com" 
-]);
 
 var_dump($response);
 ```
@@ -327,14 +328,18 @@ var_dump($response);
 
 ### Verify Bank account
 ```
+use Bitsika\Resources\Supports\Country;
+
+...
+
 // Verify Ghana banks
-$response = $merchant->banks()->verifyAccount('ghana', [
+$response = $merchant->banks()->verifyAccount(Country::GHANA, [
     "account_number" => "0218420116",
     "bank_code" => "058"
 ]);
 
 // Verify Nigeria banks
-$response = $merchant->banks()->verifyAccount('nigeria', [
+$response = $merchant->banks()->verifyAccount(Country::NIGERIA, [
     "account_number" => "0218420116",
     "bank_code" => "058"
 ]);
