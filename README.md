@@ -328,8 +328,8 @@ var_dump($response);
 
 ### Verify Bank account
 ```
+...
 use Bitsika\Resources\Supports\Country;
-
 ...
 
 // Verify Ghana banks
