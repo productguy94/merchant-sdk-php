@@ -128,7 +128,7 @@ class Http implements HttpClientInterface
 
     public function withHeader(array $headers)
     {
-        $this->handler->setHeader($this->headers, $headers);
+        $this->handler->setHeader($headers);
 
         return $this;
     }
