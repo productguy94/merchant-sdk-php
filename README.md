@@ -15,7 +15,7 @@ This package requires PHP >= 7.0 and composer to run.
 Run the command below to Install.
 
 ```
-composer require bitsika/merchant-sdk
+composer require bitsika/merchant-sdk-php
 ```
 
 To use the bindings, use Composer's autoload:
