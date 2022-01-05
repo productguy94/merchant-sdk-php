@@ -35,11 +35,17 @@ class Merchant
      */
     protected $response;
     
-
+    /**
+     * Is staging environment
+     * 
+     * @var bool
+     */
+    protected $isTestEnvironment;
+    
     /**
      * Create instance of Bitsika
      * 
-     * @param string $secretKey    Merchant Secret Key 
+     * @param string $secretKey   Merchant Secret Key 
      * 
      * @return void
      */
@@ -48,8 +54,14 @@ class Merchant
         if (! is_string($secretKey) || ! (substr($secretKey, 0, 8) === 'bsk_sec_')) {
             throw new \InvalidArgumentException("Invalid secret key passed. {$secretKey}");
         }
+        
+        if (! is_string($secretKey) || ! (substr($secretKey, 0, 8) === 'bsk_sec_')) {
+            throw new \InvalidArgumentException("Invalid secret key passed. {$secretKey}");
+        }
 
-        $this->http = new Http(MerchantConfig::API_BASE_URL);
+        $this->isTestEnvironment = is_string($secretKey) && (substr($secretKey, 0, 13) === 'bsk_sec_test_');
+        
+        $this->http = new Http($this->isTestEnvironment ? MerchantConfig::STAGING_API_BASE_URL : MerchantConfig::API_BASE_URL);
 
         $this->http->withToken($secretKey)
             ->withHeader(['x-service-name' => MerchantConfig::SERVICE_NAME]);

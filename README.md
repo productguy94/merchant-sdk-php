@@ -14,12 +14,12 @@ https://documenter.getpostman.com/view/12690520/UUy39RrV
 This package requires PHP >= 7.0 and composer to run.
 Run the command below to Install.
 
-```
+```bash
 composer require bitsika/merchant-sdk-php
 ```
 
 To use the bindings, use Composer's autoload:
-```
+```bash
 require_once __DIR__ . '/vendor/autoload.php';
 ```
 
@@ -31,7 +31,7 @@ Below are basic examples on how to use the package.
 >> Here we would assume `bsk_sec_SoMemAGicalNumBErForteSt` is our merchant's secret key. (Note: You should change this to your merchant's secret key when testing. If you do not have one, visit [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) to get it)
 
 
-```
+```php
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Bitsika\Merchant;
@@ -43,14 +43,14 @@ From the sample above, the variable `$merchant` is now an instance of a Bitsika 
 
 # Merchant
 ### Get merchant detail
-```
+```php
 $response = $merchant->detail();
 
 var_dump($response);
 ```
 
 ### Get merchant statistics
-```
+```php
 $response = $merchant->statistics();
 
 var_dump($response);
@@ -59,7 +59,7 @@ var_dump($response);
 # Invoices
 
 ### Create invoice
-```
+```php
 $response = $merchant->invoices()->create([
     "title" => "Coins of life", 
     "description" => "Biscuits that makes the brain go pita paka, pita paka", 
@@ -73,14 +73,14 @@ var_dump($response);
 ```
 
 ### Get all invoices
-```
+```php
 $response = $merchant->invoices()->all();
 
 var_dump($response);
 ```
 
 ### Get invoice by id
-```
+```php
 $invoiceId = '948641e6-b4ea-4053-a60b-7052777f33fa';
 $response = $merchant->invoices()->get($invoiceId);
 
@@ -88,7 +88,7 @@ var_dump($response);
 ```
 
 ### Delete invoice
-```
+```php
 $invoiceId = '948641e6-b4ea-4053-a60b-7052777f33fa';
 $response = $merchant->invoices()->delete($invoiceId);
 
@@ -97,7 +97,7 @@ var_dump($response);
 
 # Transactions
 ###  Get all transactions
-```
+```php
 $response = $merchant->transaction()->all([
     ...
     'type' => 'OUT',
@@ -110,14 +110,14 @@ var_dump($response);
 You can add other filters to the array. Alternatively, if you do not plan on filtering your response, you can either leave the array empty or don't pass any argument into it.
 
 ###  Get transaction statistics
-```
+```php
 $response = $merchant->transaction()->statistics();
 
 var_dump($response);
 ```
 
 ### Verify transaction 
-```
+```php
 $transactionId = 591;
 $response = $merchant->transaction()->verify($transactionId);
 
@@ -125,7 +125,7 @@ var_dump($response);
 ```
 
 ### Cash out
-```
+```php
 $response = $merchant->transaction()->cashOut([
    "platform" => "Flutterwave", 
    "amount" => 4000, 
@@ -141,7 +141,7 @@ var_dump($response);
 ```
 
 ### Send Cash
-```
+```php
 $response = $merchant->transaction()->sendCash([
    "platform" => "Bitsika", 
    "amount" => 100, 
@@ -156,7 +156,7 @@ var_dump($response);
 ```
 
 ### Add Cash
-```
+```php
 $response = $merchant->transaction()->addCash([
    "platform" => "Flutterwave", 
    "amount" => 900, 
@@ -175,7 +175,7 @@ var_dump($response);
 ```
 
 ### Get transaction balances
-```
+```php
 $response = $merchant->transaction()->balances();
 
 var_dump($response);
@@ -184,7 +184,7 @@ var_dump($response);
 # Virtual card
 
 ###  Create Card
-```
+```php
 $response = $merchant->virtualCard()->create([
    "name" => "Tommie Nii Darku", 
    "currency" => "USD", 
@@ -196,14 +196,14 @@ var_dump($response);
 ```
 
 ###  Get all virtual cards
-```
+```php
 $response = $merchant->virtualCard()->all();
 
 var_dump($response);
 ```
 
 ###  Get virtual card by id
-```
+```php
 $cardId = 113;
 $response = $merchant->virtualCard()->get($cardId);
 
@@ -211,7 +211,7 @@ var_dump($response);
 ```
 
 ###  Delete virtual card by id
-```
+```php
 $cardId = 113;
 $response = $merchant->virtualCard()->delete($cardId);
 
@@ -219,7 +219,7 @@ var_dump($response);
 ```
 
 ###  Fund virtual card by id
-```
+```php
 $cardId = 113;
 $response = $merchant->virtualCard()->fund($cardId, [
    "amount" => "10", 
@@ -231,7 +231,7 @@ var_dump($response);
 ```
 
 ###  Withdraw from card by id
-```
+```php
 $cardId = 113;
 $response = $merchant->virtualCard()->withdraw($cardId, [
    "amount" => "5"
@@ -241,7 +241,7 @@ var_dump($response);
 ```
 
 ###  Get card Transactions
-```
+```php
 $cardId = 113;
 $response = $merchant->virtualCard()->transactions($cardId);
 
@@ -249,7 +249,7 @@ var_dump($response);
 ```
 
 ###  Block Card
-```
+```php
 $cardId = 113;
 $response = $merchant->virtualCard()->block($cardId);
 
@@ -257,68 +257,15 @@ var_dump($response);
 ```
 
 ###  Unblock Card
-```
+```php
 $cardId = 113;
 $response = $merchant->virtualCard()->unblock($cardId);
 
 var_dump($response);
 ```
 
-# Bitcoin
-
-###  Generate wallet
-```
-$userId = 39;
-$response = $merchant->bitcoin()->generate($userId);
-
-var_dump($response);
-```
-
-###  Check wallet
-```
-$userId = 39;
-$response = $merchant->bitcoin()->check($userId);
-
-var_dump($response);
-```
-
-# ABCD
-
-###  Generate wallet
-```
-$accountName = "John Doe";
-$response = $merchant->abcd()->generate($accountName);
-
-var_dump($response);
-```
-
-###  Check wallet
-```
-$accountName = "John Doe";
-$response = $merchant->abcd()->check($accountName);
-
-var_dump($response);
-```
-
-
-# Banks
-
-###  Get Nigeria banks
-```
-$response = $merchant->banks()->nigeria();
-
-var_dump($response);
-```
-
-###  Get Ghana banks
-```
-$response = $merchant->banks()->ghana();
-
-var_dump($response);
-```
-
 ###  Create virtual bank account
-```
+```php
 $response = $merchant->banks()->create([
   "account_name" => "Tommie N Darku"
 ]);
@@ -327,7 +274,7 @@ var_dump($response);
 ```
 
 ### Verify Bank account
-```
+```php
 ...
 use Bitsika\Resources\Supports\Country;
 ...
