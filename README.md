@@ -39,7 +39,7 @@ use Bitsika\Merchant;
 $merchant = new Merchant('bsk_sec_SoMemAGicalNumBErForteSt');
 ```
 
-From the sample above, the variable `$merchant` is now an instance of a Bitsika merchant, and can be used to perform any action on the merchant. 
+From the sample above, the variable `$merchant` is now an instance of a Bitsika merchant, and can be used to perform any action on the merchant.
 
 # Merchant
 ### Get merchant detail
@@ -61,12 +61,12 @@ var_dump($response);
 ### Create invoice
 ```php
 $response = $merchant->invoices()->create([
-    "title" => "Coins of life", 
-    "description" => "Biscuits that makes the brain go pita paka, pita paka", 
-    "amount" => 2000000, 
-    "currency" => "NGN", 
-    "recipient_email" => "ibk@bitsika.africa", 
-    "photo_url" => "https://lindaikeji.com" 
+    "title" => "Coins of life",
+    "description" => "Biscuits that makes the brain go pita paka, pita paka",
+    "amount" => 2000000,
+    "currency" => "NGN",
+    "recipient_email" => "ibk@bitsika.africa",
+    "photo_url" => "https://lindaikeji.com"
 ]);
 
 var_dump($response);
@@ -116,179 +116,18 @@ $response = $merchant->transaction()->statistics();
 var_dump($response);
 ```
 
-### Verify transaction 
-```php
-$transactionId = 591;
-$response = $merchant->transaction()->verify($transactionId);
 
-var_dump($response);
-```
-
-### Cash out
-```php
-$response = $merchant->transaction()->cashOut([
-   "platform" => "Flutterwave", 
-   "amount" => 4000, 
-   "currency" => "NGN", 
-   "debit_from" => "USD", 
-   "country" => "Nigeria", 
-   "account_name" => "Precious", 
-   "bank_code" => "044", 
-   "account_number" => "0690000044" 
-]);
-
-var_dump($response);
-```
 
 ### Send Cash
 ```php
 $response = $merchant->transaction()->sendCash([
-   "platform" => "Bitsika", 
-   "amount" => 100, 
-   "currency" => "USD", 
-   "username" => "davido", 
-   "debit_from" => "USD", 
-   "by_id" => "", 
-   "for" => "" 
-]);
-
-var_dump($response);
-```
-
-### Add Cash
-```php
-$response = $merchant->transaction()->addCash([
-   "platform" => "Flutterwave", 
-   "amount" => 900, 
-   "currency" => "USD", 
-   "number" => "0556451981", 
-   "username" => "akua", 
-   "network" => "Vodafone", 
-   "address" => "2MysF8fC8qX7BZqRQB9yHa8mYhxW8evzCSc", 
-   "account_number" => "0000000000", 
-   "account_name" => "Test", 
-   "bank_code" => "057", 
-   "country" => "Ghana" 
-]);
-
-var_dump($response);
-```
-
-### Get transaction balances
-```php
-$response = $merchant->transaction()->balances();
-
-var_dump($response);
-```
-
-# Virtual card
-
-###  Create Card
-```php
-$response = $merchant->virtualCard()->create([
-   "name" => "Tommie Nii Darku", 
-   "currency" => "USD", 
-   "amount" => 11, 
-   "debit_from" => "GHS" 
-]);
-
-var_dump($response);
-```
-
-###  Get all virtual cards
-```php
-$response = $merchant->virtualCard()->all();
-
-var_dump($response);
-```
-
-###  Get virtual card by id
-```php
-$cardId = 113;
-$response = $merchant->virtualCard()->get($cardId);
-
-var_dump($response);
-```
-
-###  Delete virtual card by id
-```php
-$cardId = 113;
-$response = $merchant->virtualCard()->delete($cardId);
-
-var_dump($response);
-```
-
-###  Fund virtual card by id
-```php
-$cardId = 113;
-$response = $merchant->virtualCard()->fund($cardId, [
-   "amount" => "10", 
-   "currency" => "USD", 
-   "debit_from" => "GHS"
-]);
-
-var_dump($response);
-```
-
-###  Withdraw from card by id
-```php
-$cardId = 113;
-$response = $merchant->virtualCard()->withdraw($cardId, [
-   "amount" => "5"
-]);
-
-var_dump($response);
-```
-
-###  Get card Transactions
-```php
-$cardId = 113;
-$response = $merchant->virtualCard()->transactions($cardId);
-
-var_dump($response);
-```
-
-###  Block Card
-```php
-$cardId = 113;
-$response = $merchant->virtualCard()->block($cardId);
-
-var_dump($response);
-```
-
-###  Unblock Card
-```php
-$cardId = 113;
-$response = $merchant->virtualCard()->unblock($cardId);
-
-var_dump($response);
-```
-
-###  Create virtual bank account
-```php
-$response = $merchant->banks()->create([
-  "account_name" => "Tommie N Darku"
-]);
-
-var_dump($response);
-```
-
-### Verify Bank account
-```php
-...
-use Bitsika\Resources\Supports\Country;
-...
-
-// Verify Ghana banks
-$response = $merchant->banks()->verifyAccount(Country::GHANA, [
-    "account_number" => "0218420116",
-    "bank_code" => "058"
-]);
-
-// Verify Nigeria banks
-$response = $merchant->banks()->verifyAccount(Country::NIGERIA, [
-    "account_number" => "0218420116",
-    "bank_code" => "058"
+   "platform" => "Bitsika",
+   "amount" => 100,
+   "currency" => "USD",
+   "username" => "davido",
+   "debit_from" => "USD",
+   "by_id" => "",
+   "for" => ""
 ]);
 
 var_dump($response);
