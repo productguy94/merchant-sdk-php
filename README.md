@@ -29,7 +29,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 ## Getting Started
-To get started, create an instance of the Merchant class. You will need a copy of your Bitsika API 'Secret Key'. This can be found of the [Keys and Security page](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) of our Console. 
+To get started, create an instance of the Merchant class. You will need a copy of your Bitsika API `Secret Key`. This can be found of the [Keys and Security page](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) of our [Console](https://merchant.bitsika.africa/). 
 >> Here we would assume `bsk_sec_SoMemAGicalNumBErForteSt` is our merchant's secret key. (Note: You should change this to your merchant's secret key when testing. If you do not have one, visit [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) to get it)
 
 
