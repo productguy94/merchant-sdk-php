@@ -38,7 +38,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Bitsika\Merchant;
 
-$merchant = new Merchant('bsk_sec_SoMemAGicalNumBErForteSt');
+$merchant = new Merchant('PUT_YOUR_SECRET_KEY_HERE');
 ```
 
 The variable `$merchant` is now an instance of the Merchant class and can be used to perform any of the multiple tasks available to merchants.
@@ -46,7 +46,7 @@ The variable `$merchant` is now an instance of the Merchant class and can be use
 # Merchant Methods
 ### Get merchant detail.
 
-This helps jidiojijor rejijre
+This method returns basic data related to the merchant company whose Secret Key you’re currently using. Data returned includes company name, Bitsika username, profile picture URL, KYC status, balances across multiple currencies and much more.
 
 ```php
 $response = $merchant->detail();
