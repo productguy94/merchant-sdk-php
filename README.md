@@ -4,10 +4,9 @@ The Bitsika PHP library gives convenient access to the Console Merchant API for 
 
 
 
-## Requirements
-- PHP >= 7.0
-- A Bitsika merchant `secret_key`.
->> As indicated above, In other to use the package, you need a Bisika Merchant Secret key. If you do not have one, you can get  [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security)
+## General Requirements
+1. iojeoijeioeoijr
+2. dmdiojfrejorejoi
 
 ## Installation
 This package requires PHP >= 7.0 and composer to run.
