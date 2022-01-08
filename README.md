@@ -89,7 +89,7 @@ var_dump($response);
 | Syntax      | Description | Test Text     |
 | :---        | :---        | :---          |
 | Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
+| Paragraph   | Text bhh hjhjjhjh jjhjj jjhjk jkhjkjkjk jjhjkh        | And more      |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
 
