@@ -46,7 +46,7 @@ The variable `$merchant` is now an instance of the Merchant class and can be use
 # Merchant Methods
 ### Get merchant detail.
 
-This method returns basic data related to the merchant company whose Secret Key you’re currently using. Data returned includes company name, Bitsika username, profile picture URL, KYC status, balances across multiple currencies and much more.
+This method returns basic data related to the merchant company whose `Secret Key` you’re currently using. Data returned includes company name, Bitsika username, profile picture URL, KYC status, balances across multiple currencies and much more.
 
 ```php
 $response = $merchant->detail();
