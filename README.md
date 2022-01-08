@@ -43,8 +43,11 @@ $merchant = new Merchant('bsk_sec_SoMemAGicalNumBErForteSt');
 
 The variable `$merchant` is now an instance of the Merchant class and can be used to perform any of the multiple tasks available to merchants.
 
-# Merchant
-### Get merchant detail
+# Merchant Methods
+### Get merchant detail.
+
+This helps jidiojijor rejijre
+
 ```php
 $response = $merchant->detail();
 
