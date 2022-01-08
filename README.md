@@ -86,9 +86,9 @@ var_dump($response);
 ```
 
 
-| Syntax      | Description | Test Text     |
+| Param | Required | Description |
 | :---        | :---        | :---          |
-| Header      | Title       | Here's this   |
+| Param      | Required       | Description   |
 | Paragraph   | Text bhh hjhjjhjh jjhjj jjhjk jkhjkjkjk jjhjkh        | And more      |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
