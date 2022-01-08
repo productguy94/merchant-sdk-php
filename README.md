@@ -5,8 +5,9 @@ The Bitsika PHP library gives convenient access to the Console Merchant API for 
 
 
 ## General Requirements
-1. iojeoijeioeoijr
-2. dmdiojfrejorejoi
+1. PHP version 7.0 or greater.
+2. Composer for installing packages.
+3. The binding relies on [Guzzle](https://guzzle3.readthedocs.io/index.html) to work fine.
 
 ## Installation
 This package requires PHP >= 7.0 and composer to run.
@@ -22,7 +23,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 ```
 
 ## Dependencies
-The binding relies on [Guzzle](https://guzzle3.readthedocs.io/index.html) to work fine
+
 
 ## Getting Started
 Below are basic examples on how to use the package.
