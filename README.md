@@ -54,7 +54,13 @@ $response = $merchant->detail();
 var_dump($response);
 ```
 
-### Get merchant statistics
+
+
+
+### Get merchant statistics.
+This method returns transaction statistics pertaining to the respective merchant company. It returns data like number of unique users, sum of successful transactions, sum of all transactions, etc.
+
+
 ```php
 $response = $merchant->statistics();
 
