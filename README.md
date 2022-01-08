@@ -67,7 +67,7 @@ $response = $merchant->statistics();
 var_dump($response);
 ```
 
-# Invoices
+# Invoice Methods
 
 ### Create invoice
 ```php
