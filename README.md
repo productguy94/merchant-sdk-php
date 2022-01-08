@@ -87,7 +87,7 @@ var_dump($response);
 
 
 | Param | Required | Description | Validation |
-| :---        | :---        | :---          | :---          |
+| :--- | :--- | :--- | :--- |
 | Param      | Required       | Description   | Validation |
 | Paragraph   | Text bhh hjhjjhjh jjhjj jjhjk jkhjkjkjk jjhjkh        | And more      | Validation |
 | Header      | Title       | Here's this   | Validation |
