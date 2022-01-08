@@ -1,6 +1,6 @@
-# Bitsika Merchant SDK
+# Bitsika Console for Merchants - PHP SDK
 
-The Bitsika Merchant PHP library gives convenient access to the Merchant API from applications written in the PHP language.
+The Bitsika PHP library gives convenient access to the Console Merchant API from applications written in the PHP language. Devs and merchants alike can use our API to create invoices that any Bitsika user can instantly pay. 
 
 ## API Documentation
 https://documenter.getpostman.com/view/12690520/UUy39RrV
