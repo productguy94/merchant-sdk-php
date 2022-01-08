@@ -41,7 +41,7 @@ use Bitsika\Merchant;
 $merchant = new Merchant('bsk_sec_SoMemAGicalNumBErForteSt');
 ```
 
-From the sample above, the variable `$merchant` is now an instance of a Bitsika merchant, and can be used to perform any action on the merchant.
+The variable `$merchant` is now an instance of the Merchant class and can be used to perform any of the multiple tasks available to merchants.
 
 # Merchant
 ### Get merchant detail
