@@ -69,7 +69,9 @@ var_dump($response);
 
 # Invoice Methods
 
-### Create invoice
+### Create invoice.
+fdfffg gfg fnhyyjt gfnnytyt fgyjyyy
+
 ```php
 $response = $merchant->invoices()->create([
     "title" => "Coins of life",
