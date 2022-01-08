@@ -16,7 +16,12 @@ Install the Bitsika PHP Library. Version to install is 'dev-main'.
 composer require bitsika/merchant-sdk-php
 ```
 
-To use the bindings, use Composer's autoload:
+Install the latest version of Guzzle.
+```bash
+composer require guzzlehttp/guzzle
+```
+
+To use the bindings, use Composer's autoload.
 ```bash
 require_once __DIR__ . '/vendor/autoload.php';
 ```
