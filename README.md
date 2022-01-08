@@ -26,11 +26,10 @@ To use the bindings, use Composer's autoload.
 require_once __DIR__ . '/vendor/autoload.php';
 ```
 
-## Dependencies
 
 
 ## Getting Started
-Below are basic examples on how to use the package.
+To get started, create an instance of the Merchant class. You will need a copy of your Bitsika API 'Secret Key'. This can be found of the [Keys and Security page](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) of our Console. 
 >> Here we would assume `bsk_sec_SoMemAGicalNumBErForteSt` is our merchant's secret key. (Note: You should change this to your merchant's secret key when testing. If you do not have one, visit [here](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) to get it)
 
 
