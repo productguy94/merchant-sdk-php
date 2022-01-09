@@ -89,9 +89,11 @@ var_dump($response);
 | Param | Required | Description | Validation |
 | :--- | :--- | :--- | :--- |
 | title      | Yes      | Description   | Validation |
-| Paragraph   | Text bhh hjhjjhjh jjhjj jjhjk jkhjkjkjk jjhjkh        | And more      | Validation |
-| Header      | Title       | Here's this   | Validation |
-| Paragraph   | Text        | And more      | Validation |
+| description   | Text bhh hjhjjhjh jjhjj jjhjk jkhjkjkjk jjhjkh        | And more      | Validation |
+| amount      | Title       | Here's this   | Validation |
+| currency   | Text        | And more      | Validation |
+| recipient_email   | Text        | And more      | Validation |
+| photo_url   | Text        | And more      | Validation |
 
 
 
