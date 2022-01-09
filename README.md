@@ -114,6 +114,9 @@ var_dump($response);
 
 
 ### Send cash.
+
+Use this method to send money from any of your company’s merchant balances to any Bitsika user or merchant with a $username or $cashtag. All such transfers are instant and free.
+
 ```php
 $response = $merchant->transaction()->sendCash([
    "platform" => "Bitsika",
