@@ -113,7 +113,7 @@ var_dump($response);
 
 
 
-### Send Cash
+### Send cash.
 ```php
 $response = $merchant->transaction()->sendCash([
    "platform" => "Bitsika",
