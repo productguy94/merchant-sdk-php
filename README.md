@@ -138,7 +138,6 @@ var_dump($response);
 | :--- | :--- | :--- | :--- |
 | platform | Yes | What network are you transferring the money on? | String. `Bitsika` |
 | amount | Yes | Numerical value of amount to be transferred. | Integer. Minimum amount: 1. Maximum amount: 10000000. It is important to note that because of KYC, fraud control and best practices, we suggest that the amount of your invoice doesn't exceed the equivalent of $1,000 in its respective currency. |
-| amount | Yes | Amount number that the service costs. | Integer. Minimum amount: 1. Maximum amount: 10000000. It is important to note that because of KYC, fraud control and best practices, we suggest that the amount of your invoice doesn't exceed the equivalent of $1,000 in its respective currency.|
 | currency | Yes | Denote the currency you / your company would like the payment of this invoice to be settled in.| Provide one of the following currencies: NGN, USD, XOF, XAF, GHS |
 | recipient_email | No | Who should a copy of this invoice be sent to upon creation? | String / Email format. Minimum number of characters = 4. Maximum number of characters = 50. |
 | photo_url | No | Provide the URL of your product's / service's item photo.  | String / URL format. Minimum number of characters = 4. Maximum number of characters = 280. |
