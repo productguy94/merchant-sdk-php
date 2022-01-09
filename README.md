@@ -70,7 +70,7 @@ var_dump($response);
 # Invoice Methods
 
 ### Create invoice.
-fdfffg gfg fnhyyjt gfnnytyt fgyjyyy
+This method returns basic data for a newly created invoice including (most importantly) the invoice / payment web link URL. This invoice can we paid by any Bitsika user who opens the payment link. They can pay the invoice with any currency balance in their Bitsika app. You, the merchant, will get settled instantly in the currency you specify when creating the invoice below.
 
 ```php
 $response = $merchant->invoices()->create([
