@@ -74,12 +74,12 @@ fdfffg gfg fnhyyjt gfnnytyt fgyjyyy
 
 ```php
 $response = $merchant->invoices()->create([
-    "title" => "Coins of life",
-    "description" => "Biscuits that makes the brain go pita paka, pita paka",
+    "title" => "Vanilla Ice-Cream",
+    "description" => "2 scoops of vanilla ice-cream, chocolate biscuits and coconut shavings. Large cup size.",
     "amount" => 2000000,
     "currency" => "NGN",
-    "recipient_email" => "ibk@bitsika.africa",
-    "photo_url" => "https://lindaikeji.com"
+    "recipient_email" => "test@example.com",
+    "photo_url" => "https://previews.123rf.com/images/aquir/aquir1311/aquir131100316/23569861-sample-grunge-red-round-stamp.jpg"
 ]);
 
 var_dump($response);
