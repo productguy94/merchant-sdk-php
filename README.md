@@ -88,7 +88,7 @@ var_dump($response);
 
 | Param | Required | About | Validation |
 | :--- | :--- | :--- | :--- |
-| title | Yes | kjkfjkjdjk | Validation |
+| title | Yes | Title of the invoice. Here, provide a heading on the service you provided to your customer. | Validation |
 | description | Yes | And more      | Validation |
 | amount | Yes | Here's this   | Validation |
 | currency | Yes | And more      | Validation |
