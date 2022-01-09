@@ -91,7 +91,7 @@ var_dump($response);
 | title | Yes | Title of the invoice. Here, provide a heading of the service you rendered to your customer. For example "Vanilla ice-cream with coconut shavings". | String. Minimum number of characters = 4. Maximum number of characters = 50. |
 | description | Yes | Provide more info on the service your customer is about to pay for. Example: "2 scoops of vanilla ice-cream, chocolate biscuits and coconut shavings. Large cup size". | String. Minimum number of characters = 4. Maximum number of characters = 280. |
 | amount | Yes | Amount number that the service costs. | Integer. Minimum amount: 1. Maximum amount: 10000000. It is important to note that because of KYC, fraud control and best practices, we suggest that the amount of your invoice doesn't exceed the equivalent of $1,000 in its respective currency.|
-| currency | Yes | And more      | Validation |
+| currency | Yes | Denote the currency you / your company would like the payment of this invoice to be settled in.| Provide one of the following currencies: NGN, USD, XOF, XAF, GHS |
 | recipient_email | No | And more      | Validation |
 | photo_url | No | And more      | Validation |
 
