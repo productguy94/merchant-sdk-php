@@ -86,14 +86,14 @@ var_dump($response);
 ```
 
 
-| Param | Required | Description | Validation |
+| Param | Required | About | Validation |
 | :--- | :--- | :--- | :--- |
-| title      | Yes      | Description   | Validation |
-| description   | Text bhh hjhjjhjh jjhjj jjhjk jkhjkjkjk jjhjkh        | And more      | Validation |
-| amount      | Title       | Here's this   | Validation |
-| currency   | Text        | And more      | Validation |
-| recipient_email   | Text        | And more      | Validation |
-| photo_url   | Text        | And more      | Validation |
+| title | Yes | kjkfjkjdjk | Validation |
+| description | Yes | And more      | Validation |
+| amount | Yes | Here's this   | Validation |
+| currency | Yes | And more      | Validation |
+| recipient_email | No | And more      | Validation |
+| photo_url | No | And more      | Validation |
 
 
 
