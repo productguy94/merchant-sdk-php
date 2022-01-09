@@ -99,9 +99,12 @@ var_dump($response);
 
 
 
-### Get invoice by id
+### Get invoice by id.
+
+This method is used to query an invoice’s data any time in the future. You can use this method to manually check on the state (if it’s been paid or not) or expiry status of an invoice.
+
 ```php
-$invoiceId = '948641e6-b4ea-4053-a60b-7052777f33fa';
+$invoiceId = 'INVOICE_ID_HERE';
 $response = $merchant->invoices()->get($invoiceId);
 
 var_dump($response);
