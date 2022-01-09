@@ -75,11 +75,11 @@ fdfffg gfg fnhyyjt gfnnytyt fgyjyyy
 ```php
 $response = $merchant->invoices()->create([
     "title" => "Vanilla Ice-Cream",
-    "description" => "2 scoops of vanilla ice-cream, chocolate biscuits and coconut shavings. Large cup size.",
+    "description" => "2 scoops of vanilla ice-cream, chocolate biscuits and coconut shavings.",
     "amount" => 2000000,
     "currency" => "NGN",
     "recipient_email" => "test@example.com",
-    "photo_url" => "https://previews.123rf.com/images/aquir/aquir1311/aquir131100316/23569861-sample-grunge-red-round-stamp.jpg"
+    "photo_url" => "https://image.com/test.jpg"
 ]);
 
 var_dump($response);
