@@ -21,12 +21,8 @@ Install the latest version of Guzzle.
 composer require guzzlehttp/guzzle
 ```
 
-To use the bindings, use Composer's autoload.
-```bash
-require_once __DIR__ . '/vendor/autoload.php';
-```
 
-You can also install these packages from your composer.json file.
+You can also install these packages using the `composer install` command from your `composer.json` file.
 
 ```json
 {
@@ -36,6 +32,15 @@ You can also install these packages from your composer.json file.
     }
 }
 ```
+
+
+
+To use the bindings, use Composer's autoload.
+```bash
+require_once __DIR__ . '/vendor/autoload.php';
+```
+
+
 
 ## Getting Started
 To get started, create an instance of the Merchant class. You will need a copy of your Bitsika API `Secret Key`. This can be found on the [Keys and Security page](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) of our [Console](https://merchant.bitsika.africa/).
