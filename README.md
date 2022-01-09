@@ -91,7 +91,7 @@ var_dump($response);
 | title | Yes | Title of the invoice. Here, provide a heading of the service you rendered to your customer. For example "Vanilla ice-cream with coconut shavings". | String. Minimum number of characters = 4. Maximum number of characters = 50. |
 | description | Yes | Provide more info on the service your customer is about to pay for. Example: "2 scoops of vanilla ice-cream, chocolate biscuits and coconut shavings. Large cup size". | String. Minimum number of characters = 4. Maximum number of characters = 280. |
 | amount | Yes | Amount number that the service costs. | Integer. Minimum amount: 1. Maximum amount: 10000000. It is important to note that because of KYC, fraud control and best practices, we suggest that the amount of your invoice doesn't exceed the equivalent of $1,000 in its respective currency.|
-| currency | Yes | Denote the currency you / your company would like the payment of this invoice to be settled in.| Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
+| currency | Yes | Denote the currency you / your company would like the payment of this invoice to be settled in.| String. Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
 | recipient_email | No | Who should a copy of this invoice be sent to upon creation? | String / Email format. Minimum number of characters = 4. Maximum number of characters = 50. |
 | photo_url | No | Provide the URL of your product's / service's item photo.  | String / URL format. Minimum number of characters = 4. Maximum number of characters = 280. |
 
@@ -138,6 +138,6 @@ var_dump($response);
 | :--- | :--- | :--- | :--- |
 | platform | Yes | What network are you transferring the money on? | String. `Bitsika` |
 | amount | Yes | Numerical value of amount to be transferred. | Integer. Minimum amount: 1. Maximum amount: 10000000. It is important to note that because of KYC, fraud control and best practices, we suggest that the amount of your invoice doesn't exceed the equivalent of $1,000 in its respective currency. |
-| currency | Yes | Denote the currency you / your company would like the end user to receive the transfer in.| Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
+| currency | Yes | Denote the currency you / your company would like the end user to receive the transfer in.| String. Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
 | username | Yes | Provide the `username` or `cashtag` of the Bitsika user or merchant you're making the transfer to. | String. Example: `davido`, `taylorswift13`. Do not include the `$` infront of the username when writing it. |
-| photo_url | No | Provide the URL of your product's / service's item photo.  | String / URL format. Minimum number of characters = 4. Maximum number of characters = 280. |
+| debit_from | Yes | Provide the URL of your product's / service's item photo. | String. Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
