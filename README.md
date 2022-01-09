@@ -99,13 +99,6 @@ var_dump($response);
 
 
 
-### Get all invoices
-```php
-$response = $merchant->invoices()->all();
-
-var_dump($response);
-```
-
 ### Get invoice by id
 ```php
 $invoiceId = '948641e6-b4ea-4053-a60b-7052777f33fa';
@@ -114,34 +107,6 @@ $response = $merchant->invoices()->get($invoiceId);
 var_dump($response);
 ```
 
-### Delete invoice
-```php
-$invoiceId = '948641e6-b4ea-4053-a60b-7052777f33fa';
-$response = $merchant->invoices()->delete($invoiceId);
-
-var_dump($response);
-```
-
-# Transactions
-###  Get all transactions
-```php
-$response = $merchant->transaction()->all([
-    ...
-    'type' => 'OUT',
-    'mode' => 'BTC',
-    ...
-]);
-
-var_dump($response);
-```
-You can add other filters to the array. Alternatively, if you do not plan on filtering your response, you can either leave the array empty or don't pass any argument into it.
-
-###  Get transaction statistics
-```php
-$response = $merchant->transaction()->statistics();
-
-var_dump($response);
-```
 
 
 
