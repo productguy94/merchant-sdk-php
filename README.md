@@ -26,7 +26,16 @@ To use the bindings, use Composer's autoload.
 require_once __DIR__ . '/vendor/autoload.php';
 ```
 
+You can also install these packages from your composer.json file.
 
+```json
+{
+    "require": {
+        "bitsika/merchant-sdk-php": "dev-main",
+        "guzzlehttp/guzzle": "7.4.1"
+    }
+}
+```
 
 ## Getting Started
 To get started, create an instance of the Merchant class. You will need a copy of your Bitsika API `Secret Key`. This can be found on the [Keys and Security page](https://merchant.bitsika.africa/dashboard/merchant/keys-and-security) of our [Console](https://merchant.bitsika.africa/).
