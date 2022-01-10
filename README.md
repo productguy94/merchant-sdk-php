@@ -129,6 +129,8 @@ var_dump($response);
 
 ### Send cash.
 
+Your merchant company needs to be verified (KYC verification) before you can successfully call this method. 
+
 Use this method to send money from your company’s merchant balances to any Bitsika user or merchant with a $username or $cashtag. All such transfers are instant and free.
 
 ```php
