@@ -165,8 +165,7 @@ var_dump($response);
 This method returns basic data related to the merchant company whose you’re currently using. Data returned includes company name, Bitsika username, profile picture URL, KYC status, balances across multiple currencies and much more.
 
 ```php
-$transactionId = 591;
-$response = $merchant->transaction()->verify($transactionId);
+$response = $merchant->transaction()->verify("YOUR_TRANSACTION_ID_HERE");
 
 var_dump($response);
 ```
