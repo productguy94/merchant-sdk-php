@@ -162,7 +162,7 @@ var_dump($response);
 
 ### Verify transaction.
 
-This method returns basic data related to the merchant company whose you’re currently using. Data returned includes company name, Bitsika username, profile picture URL, KYC status, balances across multiple currencies and much more.
+Use this method to verify the status of transfers you make with the `Send Cash` method above. 
 
 ```php
 $response = $merchant->transaction()->verify("YOUR_TRANSACTION_ID_HERE");
