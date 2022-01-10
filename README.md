@@ -129,13 +129,13 @@ var_dump($response);
 
 ### Send cash.
 
-Your merchant company needs to be verified (KYC verification) before you can successfully call this method. 
+Your merchant company needs to be verified (KYC verification) before you can successfully call this method.
 
 Use this method to send money from your company’s merchant balances to any Bitsika user or merchant with a $username or $cashtag. All such transfers are instant and free.
 
 ```php
 $response = $merchant->transaction()->sendCash([
-   "platform" => "Bitsika",
+   "platform" => "bitsika",
    "amount" => 100,
    "currency" => "USD",
    "username" => "davido",
@@ -152,7 +152,7 @@ var_dump($response);
 
 | Param | Required | About | Validation |
 | :--- | :--- | :--- | :--- |
-| platform | Yes | What network are you transferring the money on? | String. `Bitsika` |
+| platform | Yes | What network are you transferring the money on? | String. `bitsika` |
 | amount | Yes | Numerical value of amount to be transferred. | Integer. Minimum amount: 1. Maximum amount: 10000000. It is important to note that because of KYC, fraud control and best practices, we suggest that the amount of your invoice doesn't exceed the equivalent of $1,000 in its respective currency. |
 | currency | Yes | Denote the currency you / your company would like the end user to receive the transfer in.| String. Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
 | username | Yes | Provide the `username` or `cashtag` of the Bitsika user or merchant you're making the transfer to. | String. Example: `davido`, `taylorswift13`. Do not include the `$` infront of the username when writing it. |
