@@ -158,3 +158,15 @@ var_dump($response);
 | username | Yes | Provide the `username` or `cashtag` of the Bitsika user or merchant you're making the transfer to. | String. Example: `davido`, `taylorswift13`. Do not include the `$` infront of the username when writing it. |
 | debit_from | Yes | Denote the currency balance you / your company would like the transfer to be deducted from. You can make a transfer in one currency, debited from another. For example: you can send a user 100 USD, but choose to deduct the debit from your NGN balance. | String. Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
 | purpose | No | A comment or note to accompany the transfer. | String. Minimum number of characters = 4. Maximum number of characters = 280. |
+
+
+### Verify transaction.
+
+This method returns basic data related to the merchant company whose you’re currently using. Data returned includes company name, Bitsika username, profile picture URL, KYC status, balances across multiple currencies and much more.
+
+```php
+$transactionId = 591;
+$response = $merchant->transaction()->verify($transactionId);
+
+var_dump($response);
+```
