@@ -199,7 +199,7 @@ An example of the response to expect:
    "id": 935,
    "reference": "87-1601554148-1530",
    "currency": "USD",
-   "status": "Initiated",
+   "status": "Successful",
    "amount": 50,
    "type": "Out",
    "created_at": "2020-10-01 12:09:08",
@@ -207,7 +207,7 @@ An example of the response to expect:
    "from_account": {
       "id": 87,
       "name": "Tom Tom Darku",
-      "username": "td"
+      "username": "tdlover"
    }
 }
 ```
