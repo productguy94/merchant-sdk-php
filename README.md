@@ -165,7 +165,11 @@ var_dump($response);
 Use this method to verify the status of transfers you make with the `Send Cash` method above.
 
 ```php
-$response = $merchant->transaction()->verify("YOUR_TRANSACTION_ID_HERE");
+
+$transactionId = "YOUR_TRANSACTION_ID_HERE";
+
+$response = $merchant->transaction()->get($transactionId);
+
 
 var_dump($response);
 ```
