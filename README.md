@@ -188,7 +188,7 @@ The `event` key will be `invoice.payment_failed` for failed payments, or `invoic
 The `invoice_id` is the `id` of the invoice being paid for, while the `transaction` key contains a JSON object of the payment.
 
 ### Verifying webhooks
-Everytime a request is made to your webhook url, for security reasons, we also send a `x-bitsika-signature` in the header. This contains a `HMAC SHA512` hash of the payload signed using your secret key.
+(Optional) Everytime a request is made to your webhook url, for security reasons, we also send a `x-bitsika-signature` in the header. This contains a `HMAC SHA512` hash of the payload signed using your secret key.
 
 ```php
 if($_SERVER['HTTP_X_BITSIKA_SIGNATURE'] !== hash_hmac('sha512', $input, YOUR_SECRET_KEY_HERE))
