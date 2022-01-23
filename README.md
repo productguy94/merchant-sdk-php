@@ -179,13 +179,13 @@ var_dump($response);
 ## Invoice Webhooks
 Whenever invoices are paid, notifications are sent to the webhook URL you provided on the `Keys and Security` page of your [Bitsika Console](https://console.bitsika.africa) account. Your webhook URL is expected to be an unauthenticated `POST` request URL.
 
-Once payments are recieved, weather failed or successful, we make a post request containing the event object to your webhook url.
+Once payments are recieved, weather `Initiated`, `Failed` or `Successful`, we make a Post request containing the event object to your webhook URL.
 
 The request object contains the `event`, `invoice_id` and `transaction` details.
 
 The `event` key will be `invoice.payment_failed` for failed payments, or `invoice.payment_success` for successful payments.
 
-The `invoice_id` is the `id` of the invoice being paid for, while the `transaction` key contains a json object of the payment.
+The `invoice_id` is the `id` of the invoice being paid for, while the `transaction` key contains a JSON object of the payment.
 
 ### Verifying webhooks
 Everytime a request is made to your webhook url, for security reasons, we also send a `x-bitsika-signature` in the header. This contains a `HMAC SHA512` hash of the payload signed using your secret key.
