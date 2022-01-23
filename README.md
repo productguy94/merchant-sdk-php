@@ -177,7 +177,7 @@ var_dump($response);
 
 
 ## Invoice Webhooks
-Whenever invoices are paid for, events are triggered and notifications are sent to the webhooks you provided on your `keys and security` page. Your webhook url is expected to be an unauthenticated `POST` request url.
+Whenever invoices are paid, notifications are sent to the webhook URL you provided on the `Keys and Security` page of your [Bitsika Console](https://console.bitsika.africa) account. Your webhook URL is expected to be an unauthenticated `POST` request URL.
 
 Once payments are recieved, weather failed or successful, we make a post request containing the event object to your webhook url.
 
