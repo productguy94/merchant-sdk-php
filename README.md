@@ -193,7 +193,7 @@ if($_SERVER['HTTP_X_BITSIKA_SIGNATURE'] !== hash_hmac('sha512', $input, YOUR_SEC
 ```
 
 **Sample Response -**
-An example of the response to expect:
+An example of the JSON response to expect:
 ```
 {
    "id": 935,
