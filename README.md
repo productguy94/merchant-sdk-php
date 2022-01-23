@@ -169,3 +169,45 @@ $response = $merchant->transaction()->verify("YOUR_TRANSACTION_ID_HERE");
 
 var_dump($response);
 ```
+
+
+
+
+## Invoice Webhooks
+Whenever invoices are paid for, events are triggered and notifications are sent to the webhooks you provided on your `keys and security` page. Your webhook url is expected to be an unauthenticated `POST` request url.
+
+Once payments are recieved, weather failed or successful, we make a post request containing the event object to your webhook url.
+
+The request object contains the `event`, `invoice_id` and `transaction` details.
+
+The `event` key will be `invoice.payment_failed` for failed payments, or `invoice.payment_success` for successful payments.
+
+The `invoice_id` is the `id` of the invoice being paid for, while the `transaction` key contains a json object of the payment.
+
+### Verifying webhooks
+Everytime a request is made to your webhook url, for security reasons, we also send a `x-bitsika-signature` in the header. This contains a `HMAC SHA512` hash of the payload signed using your secret key.
+
+```php
+if($_SERVER['HTTP_X_BITSIKA_SIGNATURE'] !== hash_hmac('sha512', $input, YOUR_SECRET_KEY_HERE))
+    exit();
+```
+
+**Sample Response**
+An example of the response to expect:
+```
+{
+   "id": 935,
+   "reference": "87-1601554148-1530",
+   "currency": "USD",
+   "status": "Initiated",
+   "amount": 50,
+   "type": "Out",
+   "created_at": "2020-10-01 12:09:08",
+   "updated_at": "2020-10-01 12:09:08",
+   "from_account": {
+      "id": 87,
+      "name": "Tom Tom Darku",
+      "username": "td"
+   }
+}
+```
