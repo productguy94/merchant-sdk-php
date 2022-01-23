@@ -157,12 +157,12 @@ var_dump($response);
 | currency | Yes | Denote the currency you / your company would like the end user to receive the transfer in.| String. Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
 | username | Yes | Provide the `username` or `cashtag` of the Bitsika user or merchant you're making the transfer to. | String. Example: `davido`, `taylorswift13`. Do not include the `$` infront of the username when writing it. |
 | debit_from | Yes | Denote the currency balance you / your company would like the transfer to be deducted from. You can make a transfer in one currency, debited from another. For example: you can send a user 100 USD, but choose to deduct the debit from your NGN balance. | String. Provide one of the following currencies: `NGN`, `USD`, `XOF`, `XAF`, `GHS` |
-| purpose | No | A comment or note to accompany the transfer. | String. Minimum number of characters = 4. Maximum number of characters = 280. |
+| purpose | No | A comment or note to accompany the transfer. | String. Minimum number of characters = 4. Maximum number of characters = 255. |
 
 
 ### Verify transaction.
 
-Use this method to verify the status of transfers you make with the `Send Cash` method above. 
+Use this method to verify the status of transfers you make with the `Send Cash` method above.
 
 ```php
 $response = $merchant->transaction()->verify("YOUR_TRANSACTION_ID_HERE");
