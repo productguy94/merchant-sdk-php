@@ -170,7 +170,6 @@ $transactionId = "YOUR_TRANSACTION_ID_HERE";
 
 $response = $merchant->transaction()->get($transactionId);
 
-
 var_dump($response);
 ```
 
