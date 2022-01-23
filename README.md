@@ -192,7 +192,7 @@ if($_SERVER['HTTP_X_BITSIKA_SIGNATURE'] !== hash_hmac('sha512', $input, YOUR_SEC
     exit();
 ```
 
-**Sample Response**
+**Sample Response;**
 An example of the response to expect:
 ```
 {
