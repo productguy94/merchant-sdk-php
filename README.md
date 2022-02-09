@@ -134,8 +134,7 @@ $response = $merchant->transaction()->sendCash([
    "currency" => "USD",
    "username" => "davido",
    "debit_from" => "USD",
-   "by_id" => "",
-   "for" => ""
+   "purpose" => ""
 ]);
 
 var_dump($response);
