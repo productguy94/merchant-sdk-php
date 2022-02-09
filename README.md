@@ -16,19 +16,13 @@ Install the Bitsika PHP Library. Version to install is `dev-main`.
 composer require bitsika/merchant-sdk-php
 ```
 
-Install the latest version of Guzzle.
-```bash
-composer require guzzlehttp/guzzle
-```
-
 
 You can also install these packages using the `composer install` command from your `composer.json` file.
 
 ```json
 {
     "require": {
-        "bitsika/merchant-sdk-php": "dev-main",
-        "guzzlehttp/guzzle": "7.4.1"
+        "bitsika/merchant-sdk-php": "1.0.1"
     }
 }
 ```
